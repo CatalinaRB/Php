@@ -1,0 +1,101 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #db5ede4c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 50%; 
+    max-width: 1000px; 
+}
+
+
+header h1 {
+    font-size: 3.1rem; 
+    color: #0c9a9c;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 2.1rem; 
+    color: #140c0c;
+}
+
+
+.search-bar {
+    margin: 15px 0; /* Reducir el espacio entre la barra de búsqueda y el texto */
+}
+
+.search-bar input {
+    padding: 8px;
+    width: 200px; /* Ajustar el tamaño del campo de texto */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9rem; /* Reducir el tamaño de la fuente */
+}
+
+.search-bar button {
+    padding: 8px 12px; /* Ajustar el tamaño del botón */
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+
+.featured-products {
+    margin-top: 30px; /* Reducir el espacio superior */
+}
+
+.featured-products h2 {
+    font-size: 1.6rem; /* Reducir el tamaño del título de la sección */
+    color: #111111;
+    margin-bottom: 12px;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Reducir la distancia entre las imágenes */
+}
+
+.img_producto {
+    width: 120px; /* Reducir el tamaño de las imágenes */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.img_producto:hover {
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+    .product-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img_producto {
+        margin-bottom: 20px;
+    }
+}

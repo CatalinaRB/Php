@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Formulario</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        fieldset {
+            margin-bottom: 15px;
+            padding: 8px;
+            width: 500px;
+            margin: 3 auto;
+        }
+
+        legend {
+            font-weight: bold;
+        }
+
+        input, select, label {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        input[type="range"] {
+            width: 100%;
+        }
+
+        input[type="radio"], label[for="sexo"] {
+            /*display: inline-block;*/
+            margin-right: 15px;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <fieldset>
+        <legend>Datos personales</legend>
+        <label for="nombre">Tu nombre:</label>
+        <input type="text" id="nombre" name="nombre" required autofocus>
+        <label for="apellido">Tu apellido:</label>
+        <input type="text" id="apellido" name="apellido" required>
+        <label for="fecha">Fecha de nacimiento:</label>
+        <input type="date" id="fecha" name="fecha" required>
+        <label for="edad">Tu edad:</label>
+        <input type="number" id="edad" name="edad" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono">
+        <label>Sexo:</label>
+        <input type="radio" name="sexo" value="M">Hombre
+        <input type="radio" name="sexo" value="F">Mujer
+        <label for="ciudad">Ciudad de residencia:</label>
+        <select name="ciudad" id="ciudad">
+            <option value="Asuncion">Asunción</option>
+            <option value="Luque">Luque</option>
+            <option value="San Lorenzo">San Lorenzo</option>
+            <option value="Fernando de la Mora">Fernando de la Mora</option>
+        </select>
+    </fieldset>
+
+    <fieldset>
+        <legend>Datos laborales</legend>
+        <label>Disponibilidad de tiempo:</label>
+        <input type="checkbox" value="mañana" name="disp">Mañana
+        <input type="checkbox" value="tarde" name="disp">Tarde
+        <input type="checkbox" value="noche" name="disp">Noche
+        <label for="salario">Aspiración salarial:</label>
+        <input type="range" id="salario" name="salario" min="2500000" max="5500000" step="100000" value="2500000" oninput="this.nextElementSibling.value = 'Gs. ' + parseInt(this.value).toLocaleString()">
+        <output>Gs. 2.500.000</output>
+    </fieldset>
+
+    <button type="submit">Enviar</button>
+
+</body>
+</html>
